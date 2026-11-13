@@ -18,8 +18,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Happy Birthday, Nur Ayu Faisah ❤️",
-  description: "A special birthday gift for Nur Ayu Faisah ❤️",
+  title: "Happy 1st Anniversary Sayangku 💗",
+  description: "A little anniversary gift, made with love, just for you 💕",
 };
 
 export default function RootLayout({
