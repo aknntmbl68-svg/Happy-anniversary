@@ -16,6 +16,35 @@ const songs = [
   { name: 'Our Song 3 💗', src: '/song3.mp3' },
 ];
 
+function GiftBox({ onOpen }: { onOpen: () => void }) {
+  return (
+    <button
+      onClick={onOpen}
+      aria-label="Buka kotak hadiah"
+      className="group relative mt-8 h-56 w-64 cursor-pointer"
+    >
+      <div className="absolute bottom-5 left-1/2 h-8 w-48 -translate-x-1/2 rounded-full bg-pink-900/10 blur-md" />
+
+      <div className="absolute bottom-8 left-1/2 h-32 w-48 -translate-x-1/2 rounded-b-2xl rounded-t-md border-4 border-pink-400 bg-gradient-to-br from-pink-300 to-rose-400 shadow-xl">
+        <div className="absolute left-1/2 h-full w-7 -translate-x-1/2 bg-pink-100/90" />
+        <div className="absolute left-1/2 top-0 h-full w-2 -translate-x-1/2 bg-white/50" />
+        <div className="absolute -top-3 left-1/2 h-6 w-16 -translate-x-1/2 rounded-full bg-pink-200 shadow" />
+      </div>
+
+      <div className="absolute bottom-[148px] left-1/2 z-10 h-9 w-52 -translate-x-1/2 rounded-xl border-4 border-pink-400 bg-gradient-to-r from-pink-300 via-pink-200 to-rose-400 shadow-lg transition-transform duration-700 group-hover:-translate-y-2">
+        <div className="absolute left-1/2 top-0 h-full w-7 -translate-x-1/2 bg-pink-100" />
+        <div className="absolute -top-8 left-1/2 flex -translate-x-1/2 items-center text-5xl text-pink-500">
+          🎀
+        </div>
+      </div>
+
+      <div className="absolute bottom-20 left-1/2 z-20 -translate-x-1/2 text-4xl transition-transform duration-300 group-hover:scale-125">
+        💗
+      </div>
+    </button>
+  );
+}
+
 export default function Home() {
   const [slide, setSlide] = useState(1);
   const [password, setPassword] = useState('');
@@ -71,30 +100,26 @@ export default function Home() {
       {slide === 2 && (
         <section className="flex min-h-screen flex-col items-center justify-center px-5 text-center">
           {!opened ? (
-            <>
-              <p className="mb-8 text-lg">Ada sesuatu untuk kamuuu 🎁</p>
-              <button
-                onClick={() => setOpened(true)}
-                className="text-9xl transition duration-500 hover:scale-110"
-              >
-                🎁
-              </button>
-              <p className="mt-6 text-sm text-rose-600">Klik kotak hadiahnya yaa!</p>
-            </>
+            <div className="animate-fade-in">
+              <p className="mb-2 text-lg">Ada sesuatu untuk kamuuu 🎁</p>
+              <GiftBox onOpen={() => setOpened(true)} />
+              <p className="mt-2 text-sm text-rose-600">Klik kotak hadiahnya yaa!</p>
+            </div>
           ) : (
-            <>
+            <div className="animate-fade-in">
               <div className="animate-bounce text-8xl">💝</div>
-              <h1 className="mt-8 text-3xl font-bold">
+              <div className="mt-5 text-3xl">✨ 💗 ✨</div>
+              <h1 className="mt-6 text-3xl font-bold">
                 Happy Anniversary Sayangg💕💕
               </h1>
               <p className="mt-4">Ada banyak hal yang ingin aku ceritakan...</p>
               <button
                 onClick={() => setSlide(3)}
-                className="mt-8 rounded-full bg-rose-400 px-8 py-3 font-semibold text-white shadow-lg"
+                className="mt-8 rounded-full bg-rose-400 px-8 py-3 font-semibold text-white shadow-lg transition hover:scale-105"
               >
                 Continue 💗
               </button>
-            </>
+            </div>
           )}
         </section>
       )}
@@ -161,7 +186,6 @@ export default function Home() {
             <div className="mb-4 text-4xl">🎧</div>
             <h2 className="mb-3 text-2xl font-bold">Our Little Playlist</h2>
             <p className="mb-6 text-sm">Lagu-lagu yang menemani cerita kita 💗</p>
-
             <div className="space-y-3">
               {songs.map((item, i) => (
                 <button
@@ -174,7 +198,6 @@ export default function Home() {
                 </button>
               ))}
             </div>
-
             <audio ref={audioRef} controls className="mt-6 w-full">
               <source src={song.src} type="audio/mpeg" />
             </audio>
