@@ -417,33 +417,33 @@ export default function Home() {
             </h1>
 
             <p className="mt-3 text-sm text-rose-600">
-              A special little website, made just for you.
+              maaf yhaa sayangg web nya sederhana,soalnya macii belajarr hihihi.
             </p>
           </div>
 
           {/* LETTER */}
           <article className="animate-fade-in rounded-3xl border border-pink-200 bg-white/75 p-6 leading-8 shadow-lg">
             <h2 className="mb-5 text-center text-xl font-bold">
-              Untuk Sayangku 💌
+              Untuk Sayangkuuu 💕
             </h2>
 
-            Hai sayanggg, happy anniversary yaaa! 💕
+            Alooo sayangggg, happy anniversary yaaa! 💕💕
 
             <br /><br />
 
-            Aku cuma mau bilang terima kasih karena sudah menjadi bagian dari cerita hidupku. Terima kasih untuk setiap waktu, perhatian, cerita, dan hal-hal sederhana yang membuat hari-hariku terasa lebih berwarna.
+            first of all.. kuu mwuu ucapin happy 1st anniversary sayanggggkuuuu💕💕 ndaa terasa yhaaa sayangg kitaaa daa setahunnn, daa lewatinnn banyakk halll, ada masanyaaa kitaa senang barenggg, marahhh ugaaa, piii kitaaa tetappp bisaa lewatin cemuanyaaa bersamaa sayanggg. Sayangg makaciii yhaaa daa temaninnn kuu selama iniii, kuu hepiii bangettt sayanggg muu daa nerima kuuu, nerimaaa cemuaaa sikap kuuu, kadanggg dewasa kadanggg kayak anak kicikkk.
 
             <br /><br />
 
-            Aku tahu perjalanan kita tidak selalu sempurna. Tapi aku berharap kita bisa terus belajar memahami satu sama lain, saling mendukung, dan menciptakan lebih banyak kenangan indah.
+            Dii ceee tahunnn iniii muu daa kacii kuu banyak bangett Hall halll yang ndaa bisaa kuu lupain sayanggg, bahkannn kuu ndaa tauuu gimana cara balasnyaaa kee muuuu. Aku tauuu kitaaa lummm sempurna sayanggg, maciii belajar barenggg, kadanggg kitaa sama samaa ngecewain diriii kitaa cendiliii, pii kitaaa tetappp bisaa lewatin cemuaa nyaa bersama sayanggg. Kuuu ucapinnn makasiii yhaa sayanggg... kuu hepiii bangettt samaa muuu.
 
             <br /><br />
 
-            Semoga hari ini menjadi salah satu dari banyak hari bahagia yang akan kita rayakan bersama. Aku berharap kita masih punya banyak cerita yang bisa dikenang di masa depan.
+            Cemogaaa di hari hariii selanjutnya, dii bulan bulannn selanjutnya, bahkannn di tahun tahunnn selanjutnya kitaa tetap barengg yhaa sayanggg. Makaciii yhaaa sayanggg buatt cemuanyaaa, kuu ucapinnnn, celamatt 365 dayyy sayangggg💕💕 loveee youu sayangkuuu💕💕💕💕
 
             <br /><br />
 
-            I love youuu, sayanggg! 💗
+            Loveee youuu sayanggg satuuu jutaaa kalii milyarrr ratus tahunnn, mwahhhhhhhh💕💕💕
           </article>
 
           {/* DIGITAL FLOWER - BOUQUET */}
@@ -811,4 +811,4 @@ export default function Home() {
       `}</style>
     </main>
   );
-}
+                  }
