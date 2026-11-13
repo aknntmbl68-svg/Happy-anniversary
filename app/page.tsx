@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
@@ -517,7 +516,7 @@ export default function Home() {
             )}
           </div>
 
-          {/* OUR MEMORIES - SUDAH DIPERBAIKI */}
+          {/* OUR MEMORIES - CENTERED STACK */}
           <div className="my-24 w-full text-center">
             <div className="mb-3 text-5xl">📸</div>
 
@@ -530,47 +529,47 @@ export default function Home() {
             </p>
 
             <div
-              className="memory-stage relative mx-auto h-[300px] w-full max-w-[280px] touch-pan-y"
+              className="memory-stage mx-auto flex h-[300px] w-full max-w-[280px] items-center justify-center touch-pan-y"
               onTouchStart={handleTouchStart}
               onTouchEnd={handleTouchEnd}
             >
-              {Array.from({ length: 5 }).map((_, index) => {
-                const position = (index - activeMemory + 5) % 5;
+              <div className="memory-deck relative h-[245px] w-[190px]">
+                {Array.from({ length: 5 }).map((_, index) => {
+                  const position = (index - activeMemory + 5) % 5;
 
-                return (
-                  <button
-                    key={index}
-                    onClick={() => {
-                      if (position !== 0) {
-                        setActiveMemory(index);
-                      } else {
-                        setExpandedMemory(index);
-                      }
-                    }}
-                    className="memory-card absolute left-1/2 top-1/2 rounded-md bg-white p-3 pb-7 shadow-xl"
-                    style={{
-                      width: '190px',
-                      height: '245px',
-                      zIndex: 10 - position,
-                      transform: `translate(-50%, -50%) translate(${position * 5}px, ${position * 4}px) rotate(${(position - 2) * 4}deg) scale(${1 - position * 0.04})`,
-                      opacity: 1 - position * 0.08,
-                    }}
-                  >
-                    <div className="flex aspect-square items-center justify-center overflow-hidden bg-gradient-to-br from-pink-100 to-rose-200">
-                      <div className="text-center">
-                        <div className="text-5xl">📷</div>
-                        <p className="mt-2 text-xs text-rose-500">
-                          Memory {index + 1}
-                        </p>
+                  return (
+                    <button
+                      key={index}
+                      onClick={() => {
+                        if (position !== 0) {
+                          setActiveMemory(index);
+                        } else {
+                          setExpandedMemory(index);
+                        }
+                      }}
+                      className="memory-card absolute inset-0 rounded-md bg-white p-3 pb-7 shadow-xl"
+                      style={{
+                        zIndex: 10 - position,
+                        transform: `translate(${position * 5}px, ${position * 4}px) rotate(${(position - 2) * 4}deg) scale(${1 - position * 0.04})`,
+                        opacity: 1 - position * 0.08,
+                      }}
+                    >
+                      <div className="flex aspect-square items-center justify-center overflow-hidden bg-gradient-to-br from-pink-100 to-rose-200">
+                        <div className="text-center">
+                          <div className="text-5xl">📷</div>
+                          <p className="mt-2 text-xs text-rose-500">
+                            Memory {index + 1}
+                          </p>
+                        </div>
                       </div>
-                    </div>
 
-                    <p className="mt-3 text-sm font-medium text-rose-800">
-                      Our Memory ♡
-                    </p>
-                  </button>
-                );
-              })}
+                      <p className="mt-3 text-sm font-medium text-rose-800">
+                        Our Memory ♡
+                      </p>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
 
             <div className="mt-4 flex items-center justify-center gap-7">
@@ -782,6 +781,9 @@ export default function Home() {
         /* OUR MEMORIES */
         .memory-stage {
           position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           width: 100%;
           max-width: 280px;
           height: 300px;
@@ -790,9 +792,19 @@ export default function Home() {
           overflow: visible;
         }
 
+        .memory-deck {
+          position: relative;
+          width: 190px;
+          height: 245px;
+          flex-shrink: 0;
+        }
+
         .memory-card {
-          left: 50%;
-          top: 50%;
+          position: absolute;
+          inset: 0;
+          width: 190px;
+          height: 245px;
+          box-sizing: border-box;
           transform-origin: center center;
           transition: transform .35s ease, opacity .35s ease;
         }
