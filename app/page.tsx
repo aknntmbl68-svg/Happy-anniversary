@@ -20,7 +20,6 @@ const flowerPositions = [
   { left: '63%', top: '43%' },
 ];
 
-// Urutan foto sudah diacak
 const memoryPhotos = [
   '/IMG-20261113-WA0005.jpg',
   '/IMG-20261113-WA0002.jpg',
@@ -426,7 +425,7 @@ export default function Home() {
             </h1>
 
             <p className="mt-3 text-sm text-rose-600">
-              A special little website, made just for you.
+              maaf yhaa sayanggg macii sederhana web nyaa, coalnyaaa baru belajarrr hihihi💕💕
             </p>
           </div>
 
