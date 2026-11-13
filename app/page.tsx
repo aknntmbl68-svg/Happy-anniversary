@@ -20,12 +20,13 @@ const flowerPositions = [
   { left: '63%', top: '43%' },
 ];
 
+// Urutan foto sudah diacak
 const memoryPhotos = [
-  '/IMG-20261113-WA0004.jpg',
+  '/IMG-20261113-WA0005.jpg',
   '/IMG-20261113-WA0002.jpg',
   '/IMG-20261113-WA0006.jpg',
+  '/IMG-20261113-WA0004.jpg',
   '/IMG-20261113-WA0003.jpg',
-  '/IMG-20261113-WA0005.jpg',
 ];
 
 const songs = [
