@@ -1,14 +1,13 @@
-
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
 
 const flowerMessages = [
-  'Kamu adalah hal indah yang selalu aku syukuri setiap hari. 💗',
-  'Terima kasih sudah hadir dan mewarnai hidupku. 🌷',
-  'Semoga kita selalu punya alasan untuk tersenyum bersama. 🌸',
-  'Aku berharap masih ada banyak cerita indah bersama kamu. 💕',
-  'Bunga ini kecil, tapi rasa sayangku jauh lebih besar. 🌹',
+  'maaciii yhaa sayangg daa adaa di laiff akuuu',
+  'jangannn ceringg tunda tunda mammm loooo',
+  'Jangannn ceringg tunda tunda waktuuu kaloo mwuu ke cekulahhh, nantii ceringg telatttt',
+  'Lofff kuuu tiappp harii yhaa sayanggggg',
+  'Ceringg ceringg ceritaaa samaa kuu yhaaa, maaa ceringg cering apdet ugaaa, maaa cering cering kaciii mammm anakkk anakkkk',
 ];
 
 const flowers = ['🌷', '🌸', '🌹', '🌻', '🌺'];
