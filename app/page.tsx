@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
@@ -417,17 +418,17 @@ export default function Home() {
             </h1>
 
             <p className="mt-3 text-sm text-rose-600">
-              maaf yhaa sayangg web nya sederhana,soalnya macii belajarr hihihi.
+              A special little website, made just for you.
             </p>
           </div>
 
           {/* LETTER */}
           <article className="animate-fade-in rounded-3xl border border-pink-200 bg-white/75 p-6 leading-8 shadow-lg">
             <h2 className="mb-5 text-center text-xl font-bold">
-              Untuk Sayangkuuu 💕
+              Untuk Sayangkuu💕💕
             </h2>
 
-            Alooo sayangggg, happy anniversary yaaa! 💕💕
+            Happyy anniversary yhaaa sayangggg, yeayyyyyy, cudaaa cetahunnn yhaaa🥳😛💕
 
             <br /><br />
 
@@ -435,7 +436,7 @@ export default function Home() {
 
             <br /><br />
 
-            Dii ceee tahunnn iniii muu daa kacii kuu banyak bangett Hall halll yang ndaa bisaa kuu lupain sayanggg, bahkannn kuu ndaa tauuu gimana cara balasnyaaa kee muuuu. Aku tauuu kitaaa lummm sempurna sayanggg, maciii belajar barenggg, kadanggg kitaa sama samaa ngecewain diriii kitaa cendiliii, pii kitaaa tetappp bisaa lewatin cemuaa nyaa bersama sayanggg. Kuuu ucapinnn makasiii yhaa sayanggg... kuu hepiii bangettt samaa muuu.
+            Dii ceee tahunnn iniii muu daa kacii kuu banyak bangett Hall halll yang ndaa bisaa kuu lupain sayanggg, bahkannn kuu ndaa tauuu gimana cara balasnyaaa kee muuuu. Aku tauuu kitaaa lummm sempurna sayanggg, maciii belajar barenggg, kadanggg kitaa sama samaa ngecewain diriii kitaa cendiliii, pii kitaa tetappp bisaa lewatin cemuaa nyaa bersama sayanggg. Kuuu ucapinnn makasiii yhaa sayanggg... kuu hepiii bangettt samaa muuu.
 
             <br /><br />
 
@@ -443,7 +444,7 @@ export default function Home() {
 
             <br /><br />
 
-            Loveee youuu sayanggg satuuu jutaaa kalii milyarrr ratus tahunnn, mwahhhhhhhh💕💕💕
+            Loveee youu ceratussss milyarr jutaaa tahunnn kuadraliun yhaa sayangkuuu cintakuu, mwahhhhhhhhh💕💕
           </article>
 
           {/* DIGITAL FLOWER - BOUQUET */}
@@ -811,4 +812,4 @@ export default function Home() {
       `}</style>
     </main>
   );
-                  }
+}
