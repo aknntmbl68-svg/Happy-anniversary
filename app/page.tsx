@@ -20,6 +20,14 @@ const flowerPositions = [
   { left: '63%', top: '43%' },
 ];
 
+const memoryPhotos = [
+  '/IMG-20261113-WA0004.jpg',
+  '/IMG-20261113-WA0002.jpg',
+  '/IMG-20261113-WA0006.jpg',
+  '/IMG-20261113-WA0003.jpg',
+  '/IMG-20261113-WA0005.jpg',
+];
+
 const songs = [
   { name: 'Pretty 💗', src: '/pretty.mp3' },
   { name: 'Our Song 1 🎵', src: '/song1.mp3' },
@@ -516,7 +524,7 @@ export default function Home() {
             )}
           </div>
 
-          {/* OUR MEMORIES - CENTERED STACK */}
+          {/* OUR MEMORIES */}
           <div className="my-24 w-full text-center">
             <div className="mb-3 text-5xl">📸</div>
 
@@ -554,13 +562,12 @@ export default function Home() {
                         opacity: 1 - position * 0.08,
                       }}
                     >
-                      <div className="flex aspect-square items-center justify-center overflow-hidden bg-gradient-to-br from-pink-100 to-rose-200">
-                        <div className="text-center">
-                          <div className="text-5xl">📷</div>
-                          <p className="mt-2 text-xs text-rose-500">
-                            Memory {index + 1}
-                          </p>
-                        </div>
+                      <div className="aspect-square overflow-hidden bg-pink-100">
+                        <img
+                          src={memoryPhotos[index]}
+                          alt={`Memory ${index + 1}`}
+                          className="h-full w-full object-cover"
+                        />
                       </div>
 
                       <p className="mt-3 text-sm font-medium text-rose-800">
@@ -607,13 +614,12 @@ export default function Home() {
                 className="w-full max-w-sm rounded-2xl bg-white p-4 text-center shadow-2xl"
                 onClick={(e) => e.stopPropagation()}
               >
-                <div className="flex aspect-square items-center justify-center rounded-xl bg-gradient-to-br from-pink-100 to-rose-200">
-                  <div>
-                    <div className="text-7xl">📷</div>
-                    <p className="mt-3 text-rose-600">
-                      Memory {expandedMemory + 1}
-                    </p>
-                  </div>
+                <div className="aspect-square overflow-hidden rounded-xl bg-pink-100">
+                  <img
+                    src={memoryPhotos[expandedMemory]}
+                    alt={`Memory ${expandedMemory + 1}`}
+                    className="h-full w-full rounded-xl object-cover"
+                  />
                 </div>
 
                 <p className="my-4 font-semibold">
@@ -778,7 +784,6 @@ export default function Home() {
           font-size: 38px;
         }
 
-        /* OUR MEMORIES */
         .memory-stage {
           position: relative;
           display: flex;
