@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
@@ -51,7 +52,6 @@ export default function Home() {
   const sparkle1Ref = useRef<HTMLSpanElement>(null);
   const sparkle2Ref = useRef<HTMLSpanElement>(null);
 
-  // Coba putar musik saat website pertama kali dibuka
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -226,7 +226,6 @@ export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-gradient-to-b from-pink-100 via-rose-50 to-pink-200 text-rose-900">
 
-      {/* MUSIK WEBSITE */}
       <audio
         ref={audioRef}
         src={songs[0].src}
@@ -236,7 +235,6 @@ export default function Home() {
         className="hidden"
       />
 
-      {/* TOMBOL MUSIK KECIL */}
       <button
         onClick={toggleMusic}
         className="fixed right-4 top-4 z-40 rounded-full border border-pink-200 bg-white/90 px-4 py-2 text-sm font-semibold text-rose-600 shadow-lg backdrop-blur"
@@ -257,7 +255,6 @@ export default function Home() {
             Masukkan kode rahasia kita 💗
           </p>
 
-          {/* TITIK PIN */}
           <div className="mb-8 flex justify-center gap-4">
             {Array.from({ length: 6 }).map((_, index) => (
               <div
@@ -271,7 +268,6 @@ export default function Home() {
             ))}
           </div>
 
-          {/* KEYPAD */}
           <div className="grid w-full max-w-xs grid-cols-3 gap-3">
             {['1', '2', '3', '4', '5', '6', '7', '8', '9', '⌫', '0', '♥'].map((number) => (
               <button
@@ -464,12 +460,10 @@ export default function Home() {
             </p>
 
             <div className="bouquet-scene relative mx-auto h-80 w-full max-w-xs">
-              {/* DAUN */}
               <div className="bouquet-leaf leaf-one" />
               <div className="bouquet-leaf leaf-two" />
               <div className="bouquet-leaf leaf-three" />
 
-              {/* TANGKAI */}
               {flowers.map((_, index) => (
                 <div
                   key={`stem-${index}`}
@@ -482,7 +476,6 @@ export default function Home() {
                 />
               ))}
 
-              {/* BUNGA YANG BISA DIKLIK */}
               {flowers.map((flower, index) => (
                 <button
                   key={index}
@@ -500,7 +493,6 @@ export default function Home() {
                 </button>
               ))}
 
-              {/* KERTAS PEMBUNGKUS */}
               <div className="bouquet-wrapper" />
               <div className="bouquet-ribbon">🎀</div>
             </div>
@@ -525,8 +517,8 @@ export default function Home() {
             )}
           </div>
 
-          {/* OUR MEMORIES - POLAROID STACK */}
-          <div className="my-24 text-center">
+          {/* OUR MEMORIES - SUDAH DIPERBAIKI */}
+          <div className="my-24 w-full text-center">
             <div className="mb-3 text-5xl">📸</div>
 
             <h2 className="text-2xl font-bold">
@@ -537,9 +529,8 @@ export default function Home() {
               Five little pieces of our story 💗
             </p>
 
-            {/* AREA FOTO BERTUMPUK */}
             <div
-              className="memory-stage relative mx-auto h-80 w-full max-w-sm touch-pan-y"
+              className="memory-stage relative mx-auto h-[300px] w-full max-w-[280px] touch-pan-y"
               onTouchStart={handleTouchStart}
               onTouchEnd={handleTouchEnd}
             >
@@ -556,13 +547,13 @@ export default function Home() {
                         setExpandedMemory(index);
                       }
                     }}
-                    className={`memory-card absolute left-1/2 top-1/2 w-52 -translate-x-1/2 -translate-y-1/2 rounded-md bg-white p-3 pb-7 shadow-xl ${
-                      position === 0 ? 'memory-front' : ''
-                    }`}
+                    className="memory-card absolute left-1/2 top-1/2 rounded-md bg-white p-3 pb-7 shadow-xl"
                     style={{
+                      width: '190px',
+                      height: '245px',
                       zIndex: 10 - position,
-                      transform: `translate(-50%, -50%) translate(${position * 7}px, ${position * 5}px) rotate(${(position - 2) * 5}deg) scale(${1 - position * 0.055})`,
-                      opacity: 1 - position * 0.09,
+                      transform: `translate(-50%, -50%) translate(${position * 5}px, ${position * 4}px) rotate(${(position - 2) * 4}deg) scale(${1 - position * 0.04})`,
+                      opacity: 1 - position * 0.08,
                     }}
                   >
                     <div className="flex aspect-square items-center justify-center overflow-hidden bg-gradient-to-br from-pink-100 to-rose-200">
@@ -582,7 +573,6 @@ export default function Home() {
               })}
             </div>
 
-            {/* NAVIGASI MEMORIES */}
             <div className="mt-4 flex items-center justify-center gap-7">
               <button
                 onClick={previousMemory}
@@ -789,14 +779,22 @@ export default function Home() {
           font-size: 38px;
         }
 
-        .memory-card {
-          height: 270px;
-          transition: transform .35s ease, opacity .35s ease;
-          transform-origin: center;
+        /* OUR MEMORIES */
+        .memory-stage {
+          position: relative;
+          width: 100%;
+          max-width: 280px;
+          height: 300px;
+          margin-left: auto;
+          margin-right: auto;
+          overflow: visible;
         }
 
-        .memory-front {
-          cursor: pointer;
+        .memory-card {
+          left: 50%;
+          top: 50%;
+          transform-origin: center center;
+          transition: transform .35s ease, opacity .35s ease;
         }
       `}</style>
     </main>
